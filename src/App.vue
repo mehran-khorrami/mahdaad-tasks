@@ -1,8 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useEcommerceStore } from '@/stores/useEcommerceStore'
+
+const store = useEcommerceStore();
+
+</script>
 
 <template>
-  <div class="app">
-    <h1>Welcome to My Vue App</h1>
-    <p>This is a simple Vue.js application.</p>
-  </div>
+  <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+  <p>{{ store.mostPurchasedCategoryByCustomer }}</p>
 </template>
